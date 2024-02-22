@@ -6,3 +6,8 @@ test('renders MyComponent',()=>{
 render(<MyComponent />);
 expect(screen.getByText('Hello World')).toBeInTheDocument();
 });
+
+test('renders with Different props',()=>{
+render(<MyComponent name="Kkr" />);
+expect(screen.getByText('Hello Kkr')).toBeInTheDocument();
+});
